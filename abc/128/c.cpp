@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
-
+ 
 int main(){
     int n, m;
     cin >> n >> m;
@@ -19,7 +20,7 @@ int main(){
     for(int i = 1; i <= m; i++){
         cin >> p[i];
     }
-
+ 
     int ans = 0;
     for(int bit = 0; bit < (1<<n); bit++){
         vector<int> a;
@@ -32,11 +33,9 @@ int main(){
         for(int i = 1; i <= m; i++){
             int b = 0;
             for(int j = 0; j < a.size(); j++){
-                for(int l = 0; l < G[i].size(); l++){
-                    if(a.at(j) == G[i].at(l)){
-                        b++;
-                        break;
-                    }
+                vector<int>::iterator vIter = find(G[i].begin(), G[i].end(), a.at(j));
+                if(vIter != G[i].end()){
+                    b++;
                 }
             }
             if(b % 2 == p[i]){
