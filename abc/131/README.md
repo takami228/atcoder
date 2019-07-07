@@ -1,30 +1,30 @@
 # ABC131
 
-- (HP)[https://atcoder.jp/contests/abc131]
+- [HP](https://atcoder.jp/contests/abc131)
 
 # 成績
 
 - 2554th / 5123
 - A,B,C,D
-- パフォーマンス764
-- (成績表)[https://atcoder.jp/users/takamii228/history/share/abc131]
+- パフォーマンス 764
+- [成績表](https://atcoder.jp/users/takamii228/history/share/abc131)
 
-# A問題
+## A問題
 
 0,1番目、1,2番目、2,3番目が同じか判定する。
 
-# B問題
+## B問題
 
 場合分けする。
 
-# C問題
+## C問題
 
 最小公倍数、最大公約数を計算してベン図で場合の数を計算する。
 
-# D問題
+## D問題
 
 構造体のソートを使って順番に仕事をこなして締切に間に合うか都度判定する。
 
-# E問題
+## E問題
 
 グラフらしいけど時間足りず。
