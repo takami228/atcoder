@@ -1,6 +1,6 @@
 # AGC035
 
-- [HP](https://atcoder.jp/contests/abc132)
+- [HP](https://atcoder.jp/contests/agc035)
 
 # 成績
 
