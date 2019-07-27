@@ -10,30 +10,28 @@
 using namespace std;
 
 int main(){
-    string str;
-    cin >> str;
-    int n = str.size();
-    long long dp[100005][13];
+    string s;
+    uint64_t dp[100100][13];
+
+    cin >> s;
+    const uint64_t n = s.size();
+
     dp[0][0] = 1;
-    for(int i = 0; i < n; i++){
-        int c;
-        if(str[i] == '?'){
-            c = -1;
-        } else {
-            c = str[i] - '0';
+    for (uint64_t i = 0; i < n; ++i) {
+        const uint64_t c = (s[i] == '?') ? 100 : s[i] - '0';
+        for (uint64_t k = 0; k < 13; ++k) {
+            dp[i+1][k] = 0;
         }
-        for(int j = 0; j < 10; j++){
-            if(c != -1 && c != j){
-                continue;
+        for (uint64_t j = 0; j < 10; ++j) {
+            if (c != 100 && c != j) continue;
+            for (uint64_t k = 0; k < 13; ++k) {
+                dp[i+1][(10 * k + j) % 13] += dp[i][k];
+                dp[i+1][(10 * k + j) % 13] %= 1000000007;
             }
-            for(int k = 0; k < 13; k++){
-                dp[i+1][(k*10 + j)%13] += dp[i][k];
-            }
-        }
-        for(int j = 0; j < 13; j++){
-            dp[i+1][j] %= 1000000007;
         }
     }
+
     cout << dp[n][5] << endl;
+
     return 0;
 }
