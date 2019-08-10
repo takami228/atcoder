@@ -9,10 +9,9 @@
 #include <algorithm>
 using namespace std;
 
-bool contains(vector<int> v, int target){
-    return std::find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
+    int a, b;
+    cin >> a >> b;
+    cout << max(a+b, max(a-b, a*b)) << endl;
     return 0;
 }
