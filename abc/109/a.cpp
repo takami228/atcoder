@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <set>
 #include <queue>
 #include <stack>
 #include <cmath>
@@ -10,10 +9,13 @@
 #include <algorithm>
 using namespace std;
 
-bool contains(vector<int> v, int target){
-    return std::find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
+    int a, b;
+    cin >> a >> b;
+    if(a % 2 != 0 && b % 2 != 0){
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;
+    }
     return 0;
 }
