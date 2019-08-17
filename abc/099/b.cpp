@@ -11,9 +11,13 @@
 using namespace std;
 
 int main(){
-    int a, b, c, d;
-    cin >> a >> b >> c >> d;
-    int x = c - a;
-    int y = d - b;
-    cout << c - y << " " << d + x << " " << a - y << " " << b + x << endl;
+    int a, b;
+    cin >> a >> b;
+    int diff = b - a;
+    int b_actual = 0;
+    for(int i = 1; i <= diff; i++){
+        b_actual += i;
+    }
+    cout << b_actual - b << endl;
+    return 0;
 }
