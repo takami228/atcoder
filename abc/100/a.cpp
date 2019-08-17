@@ -13,6 +13,10 @@ using namespace std;
 int main(){
     int a, b;
     cin >> a >> b;
-    cout << (a-1)*(b-1) << endl;
+    if(a <= 8 && b <= 8){
+        cout << "Yay!" << endl;
+    } else {
+        cout << ":(" << endl;
+    }
     return 0;
 }

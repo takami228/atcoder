@@ -13,18 +13,18 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    int ans = 0;
-    for(int i = 1; i <= n; i+=2){
-        int yakusu = 0;
-        for(int j = 1; j <= i; j++){
-            if(i % j == 0){
-                yakusu++;
+    bool ans = false;
+    for(int i = 0; i <= 25; i++){
+        for(int j = 0; j <= 15; j++){
+            if(i*4 + j*7 == n){
+                ans = true;
             }
         }
-        if(yakusu == 8){
-            ans++;
-        }
     }
-    cout << ans << endl;
+    if(ans){
+        cout << "Yes" << endl;
+    } else {
+        cout << "No" << endl;            
+    }
     return 0;
 }

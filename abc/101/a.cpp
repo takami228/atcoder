@@ -11,8 +11,16 @@
 using namespace std;
 
 int main(){
-    int a, b;
-    cin >> a >> b;
-    cout << (a-1)*(b-1) << endl;
+    string s;
+    cin >> s;
+    int ans = 0;
+    for(int i = 0; i < s.size(); i++){
+        if(s.at(i) == '+'){
+            ans++;
+        } else {
+            ans--;
+        }
+    }
+    cout << ans << endl;
     return 0;
 }

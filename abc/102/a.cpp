@@ -11,8 +11,12 @@
 using namespace std;
 
 int main(){
-    int a, b;
-    cin >> a >> b;
-    cout << (a-1)*(b-1) << endl;
+    int n;
+    cin >> n;
+    if(n % 2 == 0){
+        cout << n << endl;
+    } else {
+        cout << 2*n << endl;
+    }
     return 0;
 }
