@@ -9,7 +9,6 @@
 #include <iomanip>
 #include <algorithm>
 using namespace std;
-using ll = long long;
 
 void print_ans(bool flag){
     if(flag){
@@ -19,10 +18,13 @@ void print_ans(bool flag){
     }   
 }
 
-bool contains(vector<int> v, int target){
-    return find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
+    string s;
+    cin >> s;
+    bool ans = false;
+    for(int i = 0; i < s.size(); i++){
+        ans |= s[i] == '9';
+    }
+    print_ans(ans);
     return 0;
 }

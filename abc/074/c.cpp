@@ -9,7 +9,6 @@
 #include <iomanip>
 #include <algorithm>
 using namespace std;
-using ll = long long;
 
 void print_ans(bool flag){
     if(flag){
