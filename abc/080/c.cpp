@@ -10,14 +10,6 @@
 #include <algorithm>
 using namespace std;
 
-void print_ans(bool flag){
-    if(flag){
-        cout << "Yes" << endl;
-    } else {
-        cout << "No" << endl;
-    }   
-}
-
 bool contains(vector<int> v, int target){
     return find(v.begin(), v.end(), target) != v.end();
 }
