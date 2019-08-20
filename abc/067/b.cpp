@@ -9,15 +9,21 @@
 #include <iomanip>
 #include <algorithm>
 using namespace std;
+using ll = long long;
 
 int main(){
     int n, k;
     cin >> n >> k;
-    int ans = 0;
+    vector<int> l;
     for(int i = 0; i < n; i++){
-        int x;
-        cin >> x;
-        ans += min(2*x, 2*abs(x-k));
+        int m;
+        cin >> m;
+        l.push_back(m);
+    }
+    sort(l.begin(), l.end(), greater<int>());
+    int ans = 0;
+    for(int i = 0 ; i < k; i++){
+        ans += l[i];
     }
     cout << ans << endl;
     return 0;

@@ -9,16 +9,11 @@
 #include <iomanip>
 #include <algorithm>
 using namespace std;
+using ll = long long;
 
 int main(){
-    int n, k;
-    cin >> n >> k;
-    int ans = 0;
-    for(int i = 0; i < n; i++){
-        int x;
-        cin >> x;
-        ans += min(2*x, 2*abs(x-k));
-    }
-    cout << ans << endl;
+    string n;
+    cin >> n;
+    cout << "ABC" + n << endl;
     return 0;
 }
