@@ -12,13 +12,11 @@ using namespace std;
 using ll = long long;
 
 int main(){
-    string s;
-    cin >> s;
-    int ans = 0;
-    for(int i = 0; i < s.size()-1; i++){
-        if(s[i] != s[i+1]){
-            ans++;
-        }
+    ll n, k;
+    cin >> n >> k;
+    ll ans = k;
+    for(ll i = 2; i <= n; i++){
+        ans *= (k-1);
     }
     cout << ans << endl;
     return 0;
