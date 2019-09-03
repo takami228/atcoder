@@ -11,20 +11,9 @@
 using namespace std;
 using ll = long long;
 
-void print_ans(bool flag){
-    if(flag){
-        cout << "Yes" << endl;
-    } else {
-        cout << "No" << endl;
-    }   
-}
-
-bool contains(vector<int> v, int target){
-    return find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
     int n;
     cin >> n;
+    cout << n*(n+1)/2 << endl;
     return 0;
 }

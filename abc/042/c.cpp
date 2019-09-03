@@ -24,7 +24,5 @@ bool contains(vector<int> v, int target){
 }
 
 int main(){
-    int n;
-    cin >> n;
     return 0;
 }

@@ -19,12 +19,18 @@ void print_ans(bool flag){
     }   
 }
 
-bool contains(vector<int> v, int target){
-    return find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
-    int n;
-    cin >> n;
+    string w;
+    cin >> w;
+    bool ans = true;
+    if(w.size() % 2 == 1){
+        ans = false;
+    } else {
+        sort(begin(w), end(w));
+        for(int i = 0; i < w.size()-1; i+=2){
+            ans &= w[i] == w[i+1];
+        }
+    }
+    print_ans(ans);
     return 0;
 }
