@@ -11,18 +11,19 @@
 using namespace std;
 using ll = long long;
 
-void print_ans(bool flag){
-    if(flag){
-        cout << "Yes" << endl;
-    } else {
-        cout << "No" << endl;
-    }   
-}
-
-bool contains(vector<int> v, int target){
-    return find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
+    int n, l;
+    cin >> n >> l;
+    vector<string> v;
+    string str;
+    for(int i = 0; i < n; i++){
+        cin >> str;
+        v.push_back(str);
+    }
+    sort(v.begin(), v.end());
+    for(int i = 0; i < v.size(); i++){
+        cout << v[i];
+    }
+    cout << endl;
     return 0;
 }

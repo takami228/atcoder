@@ -13,16 +13,24 @@ using ll = long long;
 
 void print_ans(bool flag){
     if(flag){
-        cout << "Yes" << endl;
+        cout << "YES" << endl;
     } else {
-        cout << "No" << endl;
+        cout << "NO" << endl;
     }   
 }
 
-bool contains(vector<int> v, int target){
-    return find(v.begin(), v.end(), target) != v.end();
-}
-
 int main(){
+    int a;
+    int go = 0;
+    int nana = 0;
+    for(int i = 0; i < 3; i++){
+        cin >> a;
+        if(a == 5){
+            go++;
+        } else if(a == 7){
+            nana++;
+        }
+    }
+    print_ans(go == 2 && nana == 1);
     return 0;
 }
