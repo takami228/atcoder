@@ -11,16 +11,10 @@
 using namespace std;
 using ll = long long;
 
-struct CustomCompare{
-    bool operator()(const ll& lhs, const ll& rhs){
-        return lhs < rhs;
-    }
-};
-
 int main(){
     int n, m;
     cin >> n >> m;
-    priority_queue<ll, vector<ll>, CustomCompare > que;
+    priority_queue<ll, vector<ll>, less<ll> > que;
     for(int i = 0; i < n; i++){
         ll a;
         cin >> a;
